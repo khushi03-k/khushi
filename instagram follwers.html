@@ -34,13 +34,12 @@
     body{ background: var(--bg); color:#fff; }
     .section-pad{ padding: 80px 0; }
 
-    .topbar{ background: linear-gradient(90deg, #12035a, #220b92); }
-    .main-nav{ background: rgba(16,3,106,.85); backdrop-filter: blur(6px); }
+    
     .navbar .nav-link{ color:#e9eaff; }
     .navbar .nav-link.active{ color:#fff; }
     .badge-new{
       background: linear-gradient(45deg, var(--orange), var(--orange-deep));
-      color:#111; font-size:.65rem; padding:.2rem .45rem; border-radius:6px;
+      color:#111; font-size:1.5rem; padding:.2rem .45rem; border-radius:6px;
       animation: blink 1.2s infinite;
     }
     @keyframes blink{ 50%{ opacity:.35; } }
@@ -327,6 +326,101 @@
   }
 }
 
+/* Modal Background Overlay */
+.modal.fade .modal-dialog {
+  transform: translateY(-30px);
+  transition: all 0.4s ease-in-out;
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+/* Modal Styling (Buy Now same as Bulk Pricing) */
+#buyNowModal .modal-content {
+  border: none;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 18px;
+  background: #fff; /* Same as bulk pricing modal */
+  animation: modalPop 0.4s ease;
+}
+
+/* Modal Title */
+#buyNowModal .modal-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: .5px;
+  color: #333;
+}
+
+/* Input Fields */
+#buyNowModal .form-control {
+  border-radius: 12px;
+  border: none;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: #f9f9f9;
+}
+#buyNowModal .form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  background: #fff;
+}
+
+/* Labels */
+#buyNowModal .form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Submit Button */
+#buyNowModal button[type="submit"] {
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+  background: #ffb400;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+#buyNowModal button[type="submit"]:hover {
+  background: #222;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Success Message */
+#successMessage {
+  border-radius: 12px;
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes modalPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
   </style>
 </head>
@@ -446,19 +540,19 @@
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
-          <span class="badge bg-gradient-orange text-dark fw-semibold mb-3">100% Safe • Real-Looking Followers</span>
-          <h1 class="display-5 fw-bold mb-3">Grow Instagram Followers — Fast, Safe & Affordable</h1>
+          <span class="badge bg-gradient-orange text-dark fw-semibold mb-5">100% Safe • Real-Looking Followers</span>
+          <h1 class="display-5 fw-bold mb-4">Grow Instagram Followers — Fast, Safe & Affordable</h1>
           <p class="lead text-white-50 mb-4">
             Boost credibility, increase reach, and attract real engagement. Flexible packages,
             instant start, and 24×7 support by Go2Web Solution.
           </p>
           <div class="d-flex gap-3">
-           <a href="" class="btn btn-warning fw-bold ms-3" data-bs-toggle="modal" data-bs-target="#plansModal">
+           <a href="" class="btn btn-warning fw-bold ms-4" data-bs-toggle="modal" data-bs-target="#plansModal">
             VIEW PLANS
           </a>
             <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#enquiryModal">Free Consultation</a>
           </div>
-          <ul class="hero-points mt-4">
+          <ul class="hero-points mt-5">
             <li><i class="fa-regular fa-circle-check"></i> Quality & Drop-Protected</li>
             <li><i class="fa-regular fa-circle-check"></i> Secure Payments</li>
             <li><i class="fa-regular fa-circle-check"></i> No Password Required</li>
@@ -500,7 +594,9 @@
                   <li>⚡ Quick Start within Minutes</li>
                   <li>🤝 Friendly 24/7 Support</li>
                 </ul>
-                <a href="#" class="btn mt-2">Buy Now</a>
+                 <button class="btn btn-warning fw-bold" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                    Buy Now
+                  </button>
               </div>
             </div>
           </div>
@@ -517,7 +613,9 @@
                   <li>⚡ Faster Delivery Speed</li>
                   <li>🔄 Free Refill Guarantee</li>
                 </ul>
-                <a href="#" class="btn mt-2">Buy Now</a>
+                 <button class="btn btn-warning fw-bold" data-bs-toggle="modal" data-bs-target="#buyNowModal">
+                    Buy Now
+                  </button>
               </div>
             </div>
           </div>
@@ -546,7 +644,38 @@
   </div>
 </div>
 
-
+<!-- Buy Now Modal -->
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Complete Your Order</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="buyNowForm">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="fullName" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" id="mobile" class="form-control" required pattern="[0-9]{10}">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold">Submit</button>
+        </form>
+        <!-- Success Message -->
+        <div id="successMessage" class="alert alert-success mt-3 d-none">
+          ✅ Thank you! Our team will connect with you soon.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Why Choose -->
   <section class="why section-pad">
@@ -869,6 +998,51 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buyNowForm = document.getElementById("buyNowForm");
+  const successMessage = document.getElementById("successMessage");
+
+  buyNowForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("fullName").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!name || !mobile || !email) {
+      Swal.fire({
+        icon: "warning",
+        title: "⚠️ Oops...",
+        text: "Please fill all fields correctly!"
+      });
+      return;
+    }
+
+    // Show success message (inside modal)
+    successMessage.classList.remove("d-none");
+
+    // SweetAlert Popup
+    Swal.fire({
+      icon: "success",
+      title: "🎉 Thank You!",
+      text: "Our team will connect with you soon.",
+      confirmButtonColor: "#ff8800",
+      confirmButtonText: "Okay 👍"
+    });
+
+    // Reset form
+    buyNowForm.reset();
+
+    // Auto-hide success message after 3 sec & close modal
+    setTimeout(() => {
+      successMessage.classList.add("d-none");
+      const modal = bootstrap.Modal.getInstance(document.getElementById("buyNowModal"));
+      modal.hide();
+    }, 3000);
+  });
+});
+
 </script>
 
           
@@ -879,7 +1053,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <script src="library/jquery-sticky/jquery.sticky.js"></script>
   <script src="library/owl.carousel/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
-  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         </body>
         </html>
