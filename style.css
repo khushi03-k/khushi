@@ -267,7 +267,7 @@
     list-style: none;
   }
   .img{
-    margin-left: 80px;
+    margin-left: 20px;
   }
   .nav-menu > ul > li {
     position: relative;
@@ -302,7 +302,7 @@ display: block;
   font-weight: 600;
   padding: 25px 20px;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   transition: color 0.3s ease;
 }
 /* * /Line under each link */ */
@@ -333,7 +333,42 @@ display: block;
       content: "\ea9d";
     }
   }
-  
+  /* Navbar Links */
+.nav-menu ul li a, 
+.nav-menu .nav-link {
+  position: relative;
+  display: inline-block;
+  color: #fff; /* text color */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+/* Before Line (hidden by default) */
+.nav-menu ul li a::after,
+.nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffcc00; /* line color */
+  transition: width 0.3s ease;
+}
+
+/* On Hover show line */
+.nav-menu ul li a:hover::after,
+.nav-menu .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Optional: change text color on hover */
+.nav-menu ul li a:hover,
+.nav-menu .nav-link:hover {
+  color: #ffcc00;
+}
+
   /*-----Mobile Nav-----*/
   .mobile-nav-toggle {
     position: fixed;
