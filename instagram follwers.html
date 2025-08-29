@@ -37,12 +37,12 @@
     
     .navbar .nav-link{ color:#e9eaff; }
     .navbar .nav-link.active{ color:#fff; }
-    .badge-new{
+    /* .badge-new{
       background: linear-gradient(45deg, var(--orange), var(--orange-deep));
       color:#111; font-size:1.5rem; padding:.2rem .45rem; border-radius:6px;
       animation: blink 1.2s infinite;
     }
-    @keyframes blink{ 50%{ opacity:.35; } }
+    @keyframes blink{ 50%{ opacity:.35; } } */
 
     /* Hero */
     .hero{
@@ -333,16 +333,18 @@
 }
 .modal.show .modal-dialog {
   transform: translateY(0);
+  
 }
 
 /* Modal Styling (Buy Now same as Bulk Pricing) */
 #buyNowModal .modal-content {
   border: none;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(236, 140, 140, 0.4);
   padding: 20px;
   border-radius: 18px;
   background: #fff; /* Same as bulk pricing modal */
   animation: modalPop 0.4s ease;
+  background: #0d054b;
 }
 
 /* Modal Title */
@@ -350,7 +352,7 @@
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: .5px;
-  color: #333;
+  color: #fff;
 }
 
 /* Input Fields */
@@ -373,7 +375,7 @@
 #buyNowModal .form-label {
   font-weight: 600;
   font-size: 0.9rem;
-  color: #444;
+  color: #f0dfdf;
 }
 
 /* Submit Button */
@@ -381,13 +383,13 @@
   border-radius: 25px;
   padding: 10px 25px;
   transition: 0.3s ease;
-  background: #ffb400;
+  background: #ec9191;
   color: #fff;
   border: none;
   font-weight: 600;
 }
 #buyNowModal button[type="submit"]:hover {
-  background: #222;
+  background: #7c61bb;
   color: #fff;
   transform: scale(1.05);
 }
@@ -420,6 +422,54 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* Services slider styling */
+.services-section { background: #10065f; padding: 40px 0; }
+.service-card {
+  background: #fff;
+  color:#222;
+  border-radius: 12px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(16,3,106,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  height: 180px;
+  justify-content: center;
+   transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff6600;
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+}
+.service-card img {
+  transition: transform 0.3s ease;
+}
+.service-card:hover img {
+  transform: scale(1.1);
+}
+.service-card img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+}
+.service-card h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: purple, #6746ff;
+}
+
+/* Make sure swiper area has full width */
+#serviceSwiper { width: 100%; padding: 10px 0 0 0; }
+/* Small tweak so slides don't center weirdly */
+#serviceSwiper .swiper-slide { display: flex; justify-content: center; align-items: center; }
 
 
   </style>
@@ -646,8 +696,8 @@
 
 <!-- Buy Now Modal -->
 <div class="modal fade" id="buyNowModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-white">
+  <div class="modal-dialog modal-dialog-centered" >
+    <div class="modal-content  text-white">
       <div class="modal-header">
         <h5 class="modal-title">Complete Your Order</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -818,6 +868,63 @@
       </div>
     </div>
   </section>
+  
+
+          <section class="services-section section-pad">
+  <div class="container">
+    <h2 class="section-title text-center mb-3 ">Our Services</h2>
+
+    <!-- Swiper container -->
+    <div class="swiper" id="serviceSwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="Website Development">
+            <!-- <h5>Website Development</h5> -->
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="Social Media Marketing">
+            <!-- <h5>Social Media</h5> -->
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="Bulk SMS">
+            <!-- <h5>Bulk SMS</h5> -->
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="WhatsApp API">
+            <!-- <h5>WhatsApp API</h5> -->
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="App Development">
+            <!-- <h5>App Development</h5> -->
+          </div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <img src="images/10.png" alt="E-commerce">
+            <!-- <h5>E-commerce</h5> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <!----Footer------>
 <footer id="footer">
   <div class="footer-top">
@@ -876,7 +983,37 @@
       &copy; Copyright  <span>Go2Web Solution</span> / All Rights Reserved
   </div>
 </footer>
+
+
+
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof Swiper === 'undefined') {
+    console.error('Swiper not found. Make sure swiper-bundle.min.js is included once.');
+    return;
+  }
+
+  const serviceSwiper = new Swiper('#serviceSwiper', {
+    slidesPerView: 6,          // default on desktop
+    spaceBetween: 24,
+    loop: true,
+    speed: 5000,               // higher = slower continuous feel
+    autoplay: {
+      delay: 1,                // near-continuous movement
+      disableOnInteraction: false,
+    },
+    allowTouchMove: true,      // set false to disable swiping on touch
+    grabCursor: true,
+    breakpoints: {
+      0:   { slidesPerView: 1, spaceBetween: 12 },
+      576: { slidesPerView: 2, spaceBetween: 16 },
+      768: { slidesPerView: 3, spaceBetween: 20 },
+      992: { slidesPerView: 4, spaceBetween: 22 },
+      1200:{ slidesPerView: 6, spaceBetween: 24 }
+    }
+  });
+});
+
 // Plans data (You can update prices & features)
 const plansData = {
   followers: {
@@ -1042,6 +1179,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   });
 });
+
+
+
+
 
 </script>
 
