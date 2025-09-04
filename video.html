@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
     <title>Reach Thousands Instantly with Bulk SMS Services.Enhance Customer Interaction and Drive Engagement with Powerful WhatsApp and SMS Marketing <Services class=""></Services></title>
+    <link rel="icon" href="images/Golog (2).png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="library/icofont/icofont.min.css" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
         .hero-section {
-  background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95)),
+  background: url(images/vdo6.jfif) center/cover no-repeat,
               url('https://youtube.com/shorts/-d83KWjq6_4?si=TCdzTnfHYpqFYZav') center/cover no-repeat;
   min-height: 90vh;
   display: flex;
@@ -154,6 +155,29 @@
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+/* Fade-in animation with delay */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-img {
+  animation: fadeInUp 1.5s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animate-text {
+  animation: fadeInUp 1.5s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
@@ -328,37 +352,371 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
 
 
 
-    /* Portfolio Section */
-    .portfolio-section {
-      padding: 60px 20px;
-      background: #f9f9f9;
-      text-align: center;
-    }
-    .portfolio-section h2 {
-      color: #10036a;
-      font-weight: 700;
-      margin-bottom: 30px;
-    }
-    .portfolio-gallery img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: transform 0.3s;
-    }
-    .portfolio-gallery img:hover {
-      transform: scale(1.05);
-    }
+   .sample-work-section {
+  background: #10036a; /* same as FAQ bg */
+  padding: 60px 20px;
+}
 
-    /* CTA Section */
-    .cta-section {
-      background: #10036a;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .cta-section h2 {
-      font-weight: 700;
-    }
+.sample-work-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sample-work-section p {
+  font-size: 15px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.work-box {
+  text-align: center;
+}
+
+.video-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Animation */
+.video-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.video-wrapper:hover video {
+  transform: scale(1.1);
+}
+
+
+   .cta-section {
+  background: linear-gradient(135deg, #10036a, #2b0d88);
+  color: #fff;
+  padding: 80px 20px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -5px 30px rgba(0,0,0,0.4);
+}
+
+/* Glow overlay effect */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 60%);
+  animation: rotateBg 12s linear infinite;
+  z-index: 0;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Button styling */
+.cta-section .btn-warning {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section .btn-warning:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+}
+
+.cta-section .btn-outline-light:hover {
+  background: #fff;
+  color: #10036a;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Background animation */
+@keyframes rotateBg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 15px;
+  }
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+}
+
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: none;
+  padding: 12px 15px;
+  font-size: 15px;
+}
+
+.contact-form .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.7);
+  border: 1px solid #ffc107;
+}
+
+.contact-form button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+}
+
+
+    .faq-section {
+  background: #10036a;
+  color: #fff;
+}
+
+.faq-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.faq-box {
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  color: #333;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.faq-question {
+  font-size: 16px;
+  font-weight: 600;
+  color: #10036a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.faq-question .icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #10036a;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  font-size: 13px;
+  color: #555;
+  margin-top: 8px;
+  display: none; /* hidden by default */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 22px;
+  }
+  .faq-box {
+    padding: 12px 14px;
+  }
+  .faq-question {
+    font-size: 15px;
+  }
+  .faq-answer {
+    font-size: 12px;
+  }
+}
+* Section Background */
+.faq-section {
+  background: linear-gradient(135deg, #6a0dad, #10036a);
+  color: #fff;
+  padding: 60px 0;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* FAQ Box */
+.faq-box {
+  background: #fff;
+  color: #333;
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-box h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #10036a;
+}
+
+.faq-box p {
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+  line-height: 1.6;
+  color: #555;
+}
+
+.faq-box.active p {
+  display: block;
+}
+
+/* Toggle Icon */
+.toggle-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-box.active .toggle-icon {
+  transform: rotate(45deg);
+}
+
+/* Hover Animation */
+.faq-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 26px;
+  }
+  .faq-box h5 {
+    font-size: 15px;
+  }
+  .faq-box p {
+    font-size: 13px;
+  }
+}
+.testimonial-section {
+background: #10036a;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.testimonial-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.testimonial-box {
+  background: #fff;
+  color: #333;
+  padding: 25px 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.testimonial-box:hover {
+  transform: translateY(-8px);
+  border-color: #6a0dad;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.testimonial-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #6a0dad;
+}
+
+.testimonial-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-box h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #10036a;
+}
+
+.testimonial-box span {
+  font-size: 13px;
+  color: #666;
+}
+
+.stars {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #ffb400;
+}
+
+/* Fade-in Animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-section h2 {
+    font-size: 26px;
+  }
+  .testimonial-box p {
+    font-size: 13px;
+  }
+  .testimonial-box h5 {
+    font-size: 15px;
+  }
+}
     </style>
 </head>
 <body>
@@ -447,12 +805,13 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
       
         <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="# " target="_blank">Video Editing</a></li>
+          
           <li><a href="https://go2websolution.com/web.php" target="_blank">Website Development</a></li>
           <li><a href="https://go2websolution.com/socialmedia.php" target="_blank">Social Media</a> </li>
           <li><a href="https://go2websolution.com/wa_api.php" target="_blank">WhatsApp Business API</a></li>           
           <li><a href="https://go2websolution.com/promotional.php" target="_blank">Bulk SMS</a></li>
           <li><a href="https://go2websolution.com/tollFree.php" target="_blank">Voice Call</a></li>
+          <li><a href="# " target="_blank">Video Editing</a></li>
           <a class="nav-link" href="instagram follwers.html">
               Instagram Followers
               <span class="badge-new">NEW</span>
@@ -472,24 +831,38 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
       From <strong>social media reels</strong> to <strong>high-end commercials</strong>, we make your story shine.
     </p>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="#contact" class="btn btn-warning btn-lg px-4">Get Started</a>
-      <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">Watch Demo</a>
+      <!-- <a href="#contact" class="btn btn-warning btn-lg px-4">Get Started</a> -->
+      <a href="#" class="btn btn-outline-light btn-lg px-4">Watch Demo</a>
     </div>
   </div>
 </section>
 
 <!-- About -->
-<section class="about-section">
+<!-- About Section -->
+<section class="about-section py-5">
   <div class="container">
     <div class="row align-items-center">
+      
       <!-- Left Side: Image/Video Preview -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/vdoo.png" alt="Video Editing" class="img-fluid rounded shadow">
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        
+        <!-- Image with Animation -->
+        <!-- <img src="images/vdoo-removebg-preview.png" 
+             alt="Video Editing" 
+             class="img-fluid rounded shadow animate-img"> -->
+
+        <!-- Optional Video Preview -->
+        <div class="mt-4">
+          <video class="w-100 rounded shadow" autoplay muted loop>
+            <source src="images/banner-long.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
       <!-- Right Side: Text -->
       <div class="col-md-6">
-        <h2>Why Choose Our Video Editing?</h2>
+        <h2 class="animate-text">Why Choose Our Video Editing?</h2>
         <p class="mb-3">
           We specialize in turning your raw footage into cinematic experiences. Whether you need content for YouTube, ads, corporate presentations, or personal projects, our team ensures creativity and precision in every frame.
         </p>
@@ -504,6 +877,7 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
     </div>
   </div>
 </section>
+
 
 
 <!-- Services -->
@@ -573,7 +947,7 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
   </div>
 </section>
 
-<section class="pricing-section">
+<section class="pricing-section py-5">
   <div class="container">
     <h2 class="text-center mb-5 text-white fw-bold">Our Pricing Plans</h2>
     <div class="row g-4">
@@ -589,11 +963,11 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
             <li>Color correction</li>
             <li>1 Revision</li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Choose Plan</a>
+          <a href="#" class="btn btn-primary choose-plan" data-plan="Basic - ₹3,999" data-bs-toggle="modal" data-bs-target="#contactModal">Choose Plan</a>
         </div>
       </div>
       
-      <!-- Standard (Popular) -->
+      <!-- Standard -->
       <div class="col-md-4">
         <div class="pricing-card popular">
           <div class="ribbon">Most Popular</div>
@@ -605,7 +979,7 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
             <li>Motion graphics</li>
             <li>3 Revisions</li>
           </ul>
-          <a href="#contact" class="btn btn-warning">Choose Plan</a>
+          <a href="#" class="btn btn-warning choose-plan" data-plan="Standard - ₹7,999" data-bs-toggle="modal" data-bs-target="#contactModal">Choose Plan</a>
         </div>
       </div>
       
@@ -620,35 +994,225 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
             <li>Full color grading</li>
             <li>Unlimited revisions</li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Choose Plan</a>
+          <a href="#" class="btn btn-primary choose-plan" data-plan="Premium - ₹11,999" data-bs-toggle="modal" data-bs-target="#contactModal">Choose Plan</a>
         </div>
       </div>
       
     </div>
   </div>
 </section>
-
-
-  <!-- Portfolio -->
-  <section class="portfolio-section">
-    <div class="container">
-      <h2>Sample Works</h2>
-      <div class="row portfolio-gallery">
-        <div class="col-md-4"><img src="images/10.png" alt=""></div>
-        <div class="col-md-4"><img src="images/10.png" alt=""></div>
-        <div class="col-md-4"><img src="images/10.png" alt=""></div>
+<!-- Contact Form Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content bg-dark text-white p-3 rounded-4" style="max-width: 380px; margin: auto;">
+      <div class="modal-header border-0 py-2">
+        <h6 class="modal-title">📩 Contact Us</h6>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body py-2">
+        <form class="contact-form">
+          <input type="hidden" id="selectedPlan" name="selectedPlan"> <!-- hidden field -->
+          
+          <div class="mb-2">
+            <label for="name" class="form-label small">Name</label>
+            <input type="text" id="name" class="form-control form-control-sm" placeholder="Your name" required>
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label small">Email</label>
+            <input type="email" id="email" class="form-control form-control-sm" placeholder="Your email" required>
+          </div>
+          <div class="mb-2">
+            <label for="message" class="form-label small">Message</label>
+            <textarea id="message" rows="3" class="form-control form-control-sm" placeholder="Write here..." required></textarea>
+          </div>
+          
+          <div class="text-center mt-2">
+            <button type="submit" class="btn btn-warning btn-sm px-3 py-1">🚀 Send</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- CTA -->
-  <section class="cta-section" id="contact">
-    <div class="container">
-      <h2>Ready to Start Your Project?</h2>
-      <p>Contact us today and let's create something amazing together!</p>
-      <a href="contact.html" class="btn btn-light mt-3">Contact Us</a>
+
+
+ <!-- Sample Work Section -->
+<section id="portfolio" class="sample-work-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 text-white">🎬 Our Sample Work</h2>
+    <p class="text-center text-light mb-5">
+      A glimpse of how we transform raw footage into engaging stories ✨
+    </p>
+
+    <div class="row g-4">
+      <!-- Work 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="work-box">
+          <div class="video-wrapper">
+            <video autoplay loop muted playsinline class="w-100 rounded">
+              <source src="images/reel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h5 class="mt-3 text-white text-center">Social Media Reel</h5>
+        </div>
+      </div>
+
+      <!-- Work 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="work-box">
+          <div class="video-wrapper">
+            <video autoplay loop muted playsinline class="w-100 rounded">
+              <source src="images/promotional.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h5 class="mt-3 text-white text-center">Promotional Ad</h5>
+        </div>
+      </div>
+
+      <!-- Work 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="work-box">
+          <div class="video-wrapper">
+            <video autoplay loop muted playsinline class="w-100 rounded">
+              <source src="images/maharaj.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h5 class="mt-3 text-white text-center">YouTube Short</h5>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section py-5" id="contact">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-white">🚀 Ready to Start Your Project?</h2>
+    <p class="lead text-light mb-4">
+      Whether it's <strong>social media reels</strong>, <strong>ads</strong>, or 
+      <strong>professional commercials</strong> — we bring your ideas to life with cinematic editing.  
+      Let's collaborate and create something extraordinary! ✨
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#" class="btn btn-warning btn-lg px-4 shadow" data-bs-toggle="modal" data-bs-target="#contactModal">📩 Contact Us</a>
+      <a href="https://youtu.be/yFRHH5hblYM?si=ZIxi2TE-J3E-_x3-" class="btn btn-outline-light btn-lg px-4" target="_blank">🎬 View Sample Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered"> <!-- md -> sm -->
+    <div class="modal-content bg-dark text-white p-3 rounded-4" style="max-width: 380px; margin: auto;">
+      <div class="modal-header border-0 py-2">
+      </div>
+      <div class="modal-body py-2">
+        <form class="contact-form">
+          <div class="mb-2">
+            <label for="name" class="form-label small">Name</label>
+            <input type="text" id="name" class="form-control form-control-sm" placeholder="Your name" required>
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label small">Email</label>
+            <input type="email" id="email" class="form-control form-control-sm" placeholder="Your email" required>
+          </div>
+          <div class="mb-2">
+            <label for="subject" class="form-label small">Subject</label>
+            <input type="text" id="subject" class="form-control form-control-sm" placeholder="Query type">
+          </div>
+          <div class="mb-2">
+            <label for="message" class="form-label small">Message</label>
+            <textarea id="message" rows="3" class="form-control form-control-sm" placeholder="Write here..." required></textarea>
+          </div>
+          <div class="text-center mt-2">
+            <button type="submit" class="btn btn-warning btn-sm px-3 py-1">🚀 Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Testimonial Section -->
+<section class="testimonial-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">What Our Clients Say</h2>
+    <div class="row g-4">
+
+      <!-- Testimonial 1 -->
+      <div class="col-md-4">
+        <div class="testimonial-box">
+          <img src="images/saurav.jpg" alt="Client 1">
+          <p>"Amazing video editing service! Quick delivery and very professional."</p>
+          <h5>John Doe</h5>
+          <span>CEO, ExampleCorp</span>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4">
+        <div class="testimonial-box">
+          <img src="images/sikandar.png" alt="Client 2">
+          <p>"Highly recommend! Their team understood exactly what we needed."</p>
+          <h5>Jane Smith</h5>
+          <span>Marketing Head, XYZ Ltd</span>
+          <div class="stars">⭐⭐⭐⭐</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4">
+        <div class="testimonial-box">
+          <img src="images/dd sir.png" alt="Client 3">
+          <p>"Creative, fast, and reliable. Will definitely work with them again."</p>
+          <h5>Michael Lee</h5>
+          <span>Entrepreneur</span>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+    <div class="row g-4">
+
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <div class="faq-box">
+          <h5>🎥 How long does video editing take? <span class="toggle-icon">+</span></h5>
+          <p>Usually 1-3 days depending on the length & complexity.</p>
+        </div>
+        <div class="faq-box">
+          <h5>💰 What are your pricing packages? <span class="toggle-icon">+</span></h5>
+          <p>We offer Basic, Standard & Premium packages for all budgets.</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <div class="faq-box">
+          <h5>📂 Which formats do you deliver? <span class="toggle-icon">+</span></h5>
+          <p>MP4, MOV, AVI, and custom formats as per your requirement.</p>
+        </div>
+        <div class="faq-box">
+          <h5>🚀 Do you edit videos for social media? <span class="toggle-icon">+</span></h5>
+          <p>Yes! Reels, YouTube Shorts, Ads & Promotional Videos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <!----Footer------>
@@ -725,6 +1289,33 @@ background: linear-gradient(to right, rgba(16, 3, 106, 0.95), rgba(0, 0, 0, 0.95
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
+
+// Accordion Toggle
+document.querySelectorAll('.faq-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+// Fade-in on scroll
+const testimonials = document.querySelectorAll(".testimonial-box");
+window.addEventListener("scroll", () => {
+  testimonials.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < window.innerHeight - 50) {
+      box.style.animation = "fadeUp 0.8s ease forwards";
+    }
+  });
+});
+
+
+
+  document.querySelectorAll(".choose-plan").forEach(button => {
+    button.addEventListener("click", function() {
+      const plan = this.getAttribute("data-plan");
+      document.getElementById("selectedPlan").value = plan;
+      document.querySelector("#contactModal .modal-title").innerText = "📩 Contact Us - " + plan;
+    });
+  });
 
 
 
